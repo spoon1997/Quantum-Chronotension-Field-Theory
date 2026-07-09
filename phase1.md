@@ -1,0 +1,1763 @@
+Phase 1 — QCFT Master Equation Catalogue v0.1
+
+This is not yet the canonical theory. This is the complete working catalogue of equations currently in play, gathered from this development thread and the handover material.
+
+Status labels:
+
+Canonical = definition or foundation likely retained.
+
+Constitutive = material law of η; needed but not fully derived.
+
+Derived = should follow from deeper equations.
+
+Phenomenological = fitted/effective observational law.
+
+Research/Toy = useful model, not fundamental.
+
+Speculative = plausible direction, not established.
+
+Rejected/Obsolete = should not be used as a law.
+
+
+
+---
+
+A. Ontology and field definitions
+
+A1 — Fundamental η decomposition
+
+\eta^a=\rho n^a
+
+Meaning: η has scalar magnitude/density  and internal orientation .
+Status: Canonical
+Notes: This replaced scalar-only η. Probably one of QCFT’s most important upgrades.
+
+
+---
+
+A2 — η density
+
+\rho = |\eta|
+
+Meaning: scalar density/magnitude of η.
+Status: Canonical
+
+
+---
+
+A3 — Unit internal orientation
+
+n^a n_a = 1
+
+Meaning:  carries topology/orientation, not density.
+Status: Canonical
+
+
+---
+
+A4 — Background plus perturbation
+
+\rho(x,t)=\rho_0(t)+\delta\rho(x,t)
+
+Meaning: cosmology changes ; local gravity changes .
+Status: Canonical / Derived framework
+
+
+---
+
+A5 — Static local perturbation form
+
+\rho=\rho_0+\delta\rho
+
+Meaning: weak-field/local expansion.
+Status: Derived / approximation
+
+
+---
+
+B. Time and redshift
+
+B1 — Clock factor definition
+
+T=\frac{d\tau}{dt}
+
+Meaning: local proper-time rate relative to coordinate/background time.
+Status: Canonical definition
+
+
+---
+
+B2 — Clock law
+
+T=T(\rho)
+
+Meaning: process/clock rate is determined by local η density.
+Status: Constitutive
+Missing: exact functional form.
+
+
+---
+
+B3 — General redshift relation
+
+1+z=\frac{T_{\rm obs}}{T_{\rm emit}}
+
+Meaning: redshift is clock-state comparison.
+Status: Derived from time ontology / working
+
+
+---
+
+B4 — Present-normalised redshift
+
+T_{\rm obs}=1
+
+1+z=\frac{1}{T_{\rm emit}}
+
+Meaning: current observer clock normalisation.
+Status: Derived convention
+
+
+---
+
+B5 — Local plus path redshift decomposition
+
+z_{\rm obs}=z_{\rm bg}+z_{\rm path}+z_{\rm local}
+
+or multiplicatively:
+
+1+z_{\rm obs}
+=
+(1+z_{\rm bg})(1+z_{\rm path})(1+z_{\rm local})
+
+Meaning: background, path-integrated, and local η contributions.
+Status: Speculative / effective
+
+
+---
+
+B6 — Path η-tension redshift
+
+1+z_{\rm obs}
+=
+\frac{T_{\rm obs}}{T_{\rm emit}}
+\exp\left[
+\int_\gamma \mathcal R_\eta(\rho,\nabla\rho,\sigma_\eta,\ldots)\,dl
+\right]
+
+Meaning: cumulative η-tension/optical-clock contribution.
+Status: Speculative
+Danger: must preserve SN time dilation and Etherington relation.
+
+
+---
+
+B7 — Infinitesimal path redshift
+
+d\ln\nu
+=
+-d\ln T
+-
+\mathcal R_\eta dl
+
+Meaning: frequency shift through clock and η-path effects.
+Status: Speculative
+
+
+---
+
+C. Cann density, stiffness and potential
+
+C1 — Cann density condition
+
+\rho<\rho_C
+
+Meaning: η approaches but does not cross maximum density.
+Status: Derived if stiffness/potential diverges; not independent canonical law
+
+
+---
+
+C2 — Candidate stiffness law
+
+K(\rho)
+=
+\frac{K_0}{\left(1-\rho/\rho_C\right)^2}
+
+Meaning: η stiffness diverges near Cann density.
+Status: Constitutive / strong working candidate
+
+
+---
+
+C3 — Cann gap
+
+\chi = 1-\frac{\rho}{\rho_C}
+
+or for core density:
+
+\chi=
+1-\frac{\rho_0+\Delta}{\rho_C}
+
+Meaning: distance from Cann limit.
+Status: Definition / useful
+
+
+---
+
+C4 — Generic Cann potential
+
+V_C(\rho)
+\to\infty
+\quad\text{as}\quad
+\rho\to\rho_C
+
+Meaning: compression to Cann density costs infinite energy.
+Status: Constitutive
+
+
+---
+
+C5 — Toy Cann potential used in chronode modelling
+
+V_C(\rho)
+=
+\frac12m_\rho^2(\rho-\rho_0)^2
++
+\Lambda
+\left[
+\frac{1}{1-\rho/\rho_C}
+-
+\frac{1}{1-\rho_0/\rho_C}
+-
+\frac{\rho-\rho_0}{\rho_C(1-\rho_0/\rho_C)^2}
+\right]
+
+Meaning: harmonic restoring plus divergence, normalised at .
+Status: Research/Toy
+
+
+---
+
+C6 — Density correlation length
+
+\ell_\rho=\frac{\sqrt{K_0}}{m_\rho}
+
+Meaning: finite range over which density perturbations propagate/bind.
+Status: Derived from linearised density sector
+
+
+---
+
+D. Gradia and weak gravity
+
+D1 — Weak-field dimensionless potential
+
+\epsilon
+=
+\frac12
+\frac{\delta\rho}{\rho_C-\rho_0}
+
+Meaning: density perturbation mapped to weak gravitational potential variable.
+Status: Working / derived candidate
+
+
+---
+
+D2 — Gravitational potential
+
+\Phi=-c^2\epsilon
+
+Meaning: connects η perturbation to Newtonian potential.
+Status: Working
+
+
+---
+
+D3 — Gravitational acceleration
+
+Earlier sign conventions varied. The consistent form needs auditing.
+
+Used form:
+
+g=-\nabla\Phi
+
+with:
+
+\Phi=-c^2\epsilon
+
+so:
+
+g=c^2\nabla\epsilon
+
+and:
+
+g_{\rm QCFT}
+\approx
+\frac{c^2}{2(\rho_C-\rho_0)}\nabla\rho
+
+Meaning: Gradia acceleration from η-density gradient.
+Status: Derived weak-field candidate
+Needs: sign convention lock.
+
+
+---
+
+D4 — Gradia phenomenon
+
+\text{Gradia}\sim |\nabla\rho|
+
+Meaning: η tension generated by density gradients.
+Status: Conceptual definition, not a field equation
+
+
+---
+
+E. Emergent metric and lensing
+
+E1 — Weak-field metric
+
+ds^2
+=
+-c^2(1-2\epsilon)dt^2
++
+(1+2\epsilon)d\mathbf{x}^2
+
+Meaning: effective metric recovering weak-field GR behaviour.
+Status: Derived target / working
+
+
+---
+
+E2 — Effective refractive index
+
+n_{\rm eff}\approx 1+2\epsilon
+
+Meaning: optical interpretation of same weak-field metric.
+Status: Derived/effective
+
+
+---
+
+E3 — Point-mass lensing target
+
+\alpha=\frac{4GM}{bc^2}
+
+Meaning: QCFT must recover standard weak lensing.
+Status: Benchmark, not QCFT law
+
+
+---
+
+F. Cosmology
+
+F1 — Exact QCFT phenomenological expansion law
+
+H_\eta(z)
+=
+H_0
+\left[
+\frac34+\frac14(1+z)^2
+\right]
+
+or:
+
+E_\eta(z)
+=
+\frac{H_\eta(z)}{H_0}
+=
+\frac{3+(1+z)^2}{4}
+
+Meaning: late-time QCFT cosmology law fitting SN/BAO well.
+Status: Phenomenological
+Important: selected from theory-motivated family after data exploration, not originally predicted.
+
+
+---
+
+F2 — Low-z expansion
+
+E_\eta(z)=1+\frac12z+\frac14z^2
+
+Meaning: explains closeness to ΛCDM at low redshift.
+Status: Derived from F1
+
+
+---
+
+F3 — Candidate family explored historically
+
+E(z)=A+B(1+z)^n
+
+with:
+
+A+B=1
+
+Meaning: phenomenological relaxation family.
+Status: Historical / phenomenological
+
+
+---
+
+F4 — Response tensor
+
+R^\mu{}_\nu
+=
+{\rm diag}(T^{-2},1,1,1)
+
+With:
+
+T^{-1}=1+z
+
+R^\mu{}_\nu
+=
+{\rm diag}((1+z)^2,1,1,1)
+
+Meaning: coarse-grained response interpretation of .
+Status: Postdictive phenomenological interpretation
+
+
+---
+
+F5 — Trace response relation
+
+There was inconsistent notation in-chat. Correct relation matching F1 is:
+
+E_\eta(z)
+=
+\frac{\operatorname{Tr}R(z)}{\operatorname{Tr}R(0)}
+=
+\frac{3+(1+z)^2}{4}
+
+Meaning: three spatial response channels plus one temporal channel.
+Status: Phenomenological / interpretive
+
+
+---
+
+F6 — Deceleration parameter
+
+q(z)
+=
+-1+\frac{1+z}{E(z)}\frac{dE}{dz}
+
+For QCFT:
+
+q_\eta(z)
+=
+\frac{(1+z)^2-3}{(1+z)^2+3}
+
+Transition:
+
+z_t=\sqrt3-1\approx0.732
+
+Status: Derived from F1
+
+
+---
+
+F7 — QCFT comoving distance
+
+D_C(z)
+=
+\frac{c}{H_0}
+\int_0^z\frac{dz'}{E_\eta(z')}
+
+Closed form:
+
+D_C(z)
+=
+\frac{4c}{\sqrt3H_0}
+\left[
+\tan^{-1}\left(\frac{1+z}{\sqrt3}\right)
+-\frac{\pi}{6}
+\right]
+
+Status: Derived from F1
+
+
+---
+
+F8 — Luminosity distance
+
+d_L(z)=(1+z)D_C(z)
+
+d_L(z)
+=
+\frac{4c(1+z)}{\sqrt3H_0}
+\left[
+\tan^{-1}\left(\frac{1+z}{\sqrt3}\right)
+-\frac{\pi}{6}
+\right]
+
+Status: Derived
+
+
+---
+
+F9 — Angular diameter distance
+
+d_A(z)=\frac{D_C(z)}{1+z}
+
+Status: Derived
+
+
+---
+
+F10 — Hubble distance
+
+D_H(z)=\frac{c}{H_\eta(z)}
+=
+\frac{4c}{H_0[3+(1+z)^2]}
+
+Status: Derived from F1
+
+
+---
+
+F11 — BAO volume distance
+
+D_V(z)=
+\left[
+zD_M^2(z)D_H(z)
+\right]^{1/3}
+
+with flat case:
+
+D_M=D_C
+
+Status: Derived BAO observable
+
+
+---
+
+F12 — QCFT high-z distance ceiling
+
+D_C(\infty)
+=
+\frac{4\pi c}{3\sqrt3H_0}
+
+\frac{D_C(\infty)}{c/H_0}
+=
+\frac{4\pi}{3\sqrt3}
+\approx2.418
+
+Status: Derived from F1
+Danger: important for CMB.
+
+
+---
+
+F13 — Chronometer relation
+
+H(z)
+=
+-\frac{1}{1+z}
+\frac{dz}{dt}
+
+Meaning: direct  measurement.
+Status: Standard relation; QCFT-compatible if clock mapping holds
+
+
+---
+
+G. BAO and CMB scale relations
+
+G1 — BAO / Gradia equilibrium candidate
+
+a_{\rm Gradia}(r_{\rm BAO})=a_\eta
+
+or:
+
+a_\eta
+=
+\frac{GM_{\rm web}}{r_{\rm BAO}^2}
+
+so:
+
+r_{\rm BAO}
+=
+\sqrt{\frac{GM_{\rm web}}{a_\eta}}
+
+Meaning: BAO as cosmic-web η equilibrium scale.
+Status: Speculative
+
+
+---
+
+G2 — Implied web mass estimate
+
+M_{\rm web}
+\sim 10^{19}M_\odot
+
+for:
+
+r_{\rm BAO}\sim127\text{ Mpc}
+
+Status: Speculative estimate
+
+
+---
+
+G3 — CMB first peak projection
+
+\ell_1
+\sim
+\pi\frac{D_\eta}{r_\eta}
+
+with:
+
+D_\eta=D_C(\infty)
+
+and:
+
+r_\eta\sim147\text{ Mpc}
+
+giving:
+
+\ell_1\sim220
+
+Meaning: possible BAO/CMB scale unification.
+Status: Speculative but promising
+
+
+---
+
+G4 — Higher harmonic estimate
+
+\ell_n\sim n\ell_1
+
+Status: Speculative / too simple
+
+
+---
+
+H. CMB recycled radiation model
+
+H1 — Radiation energy density
+
+u_\gamma=a_R\Theta^4
+
+where  is radiation temperature.
+Status: Standard physics
+
+
+---
+
+H2 — Equilibrium CMB temperature
+
+Q_{\rm source}+Q_{\rm Cann}
+=
+4H_{\rm eff}a_R\Theta^4
+
+so:
+
+\Theta_{\rm CMB}
+=
+\left[
+\frac{Q_{\rm source}+Q_{\rm Cann}}
+{4H_{\rm eff}a_R}
+\right]^{1/4}
+
+Meaning: CMB as equilibrium radiation bath.
+Status: Speculative QCFT CMB model
+
+
+---
+
+H3 — Spectral kinetic equation
+
+\frac{\partial u_\nu}{\partial t}
++
+\mathbf n\cdot\nabla u_\nu
+-
+H_{\rm eff}\nu\frac{\partial u_\nu}{\partial\nu}
+=
+-\Gamma_\eta[u_\nu-B_\nu(\Theta)]
++
+j_\nu
+
+Meaning: η redshift plus weak thermalisation toward blackbody.
+Status: Speculative
+
+
+---
+
+H4 — Thermalisation window
+
+\frac{1}{t_{\rm bath}}
+\ll
+\Gamma_\eta
+\ll
+\frac{1}{t_{\rm direct}}
+
+Meaning: recycled bath thermalises while direct galaxy light remains visible.
+Status: Speculative consistency condition
+
+
+---
+
+H5 — Anisotropy expansion
+
+\Theta(\hat n)=\bar\Theta[1+\Delta(\hat n)]
+
+\Delta(\hat n)
+=
+A_{\rm path}\int_{\rm path}\delta\rho_\eta dl
++
+A_{\rm emit}\delta\rho_{\eta,emit}
++
+A_{\rm mode}\psi_\eta(\hat n)
++
+A_{\rm local}\delta\rho_{\eta,local}
+
+Status: Speculative
+
+
+---
+
+I. Galaxies and MOND-like behaviour
+
+I1 — Interpolation function
+
+\mu(x)=\frac{x}{1+x}
+
+with:
+
+x=\frac{|\nabla\rho|}{g_0}
+
+Meaning: low-Gradia η response.
+Status: Phenomenological / working
+
+
+---
+
+I2 — Effective acceleration law
+
+a
+=
+\frac12
+\left[
+a_N+
+\sqrt{a_N^2+4a_Na_\eta}
+\right]
+
+Meaning: MOND-like QCFT acceleration.
+Status: Derived from assumed interpolation
+
+
+---
+
+I3 — Deep-Gradia limit
+
+a\to\sqrt{a_Na_\eta}
+
+Status: Derived
+
+
+---
+
+I4 — BTFR
+
+v^4=GM_ba_\eta
+
+Meaning: baryonic Tully-Fisher relation.
+Status: Derived from I2/I3
+
+
+---
+
+I5 — η acceleration scale
+
+Often used:
+
+a_\eta\sim \frac{cH_\eta}{2\pi}
+
+Status: Working / phenomenological
+
+
+---
+
+J. Structure formation
+
+J1 — Standard-style growth equation target
+
+\ddot\delta
++
+2H_\eta\dot\delta
+-
+4\pi G_{\rm eff}(k,z)\rho_b\delta
+=
+0
+
+Meaning: structure growth with η-enhanced gravity.
+Status: Working target, not derived
+
+
+---
+
+J2 — Log-scale growth form
+
+\delta''
++
+\left[
+2+\frac{d\ln H}{d\ln a}
+\right]\delta'
+-
+\frac32\Omega_b(a)\mu(a,k,\delta)\delta
+=
+0
+
+Status: Research framework
+
+
+---
+
+J3 — QCFT background in scale factor
+
+E_\eta(a)=\frac34+\frac{1}{4a^2}
+=
+\frac{3+a^{-2}}4
+
+Status: Derived from F1
+
+
+---
+
+J4 — QCFT friction coefficient
+
+\frac{d\ln E_\eta}{d\ln a}
+=
+-\frac{2}{1+3a^2}
+
+F_\eta(a)
+=
+2+\frac{d\ln E_\eta}{d\ln a}
+=
+\frac{6a^2}{1+3a^2}
+
+Status: Derived from F1
+
+
+---
+
+J5 — Baryon density parameter on QCFT background
+
+\Omega_b(a)
+=
+\frac{\Omega_{b0}a^{-3}}{E_\eta(a)^2}
+
+Status: Research / if using standard density variable
+
+
+---
+
+J6 — Top-hat Newtonian acceleration
+
+a_N
+=
+\frac12
+\Omega_{b0}H_0^2
+L\delta(1+z)^2
+
+Status: Research approximation
+
+
+---
+
+J7 — η/N acceleration ratio
+
+\frac{a_\eta}{a_N}
+\sim
+\frac{6800}{L_{\rm Mpc}\delta}
+
+Status: Approximate research estimate
+
+
+---
+
+J8 — Nonlinear growth source scaling
+
+\mu\sim\sqrt{\frac{a_\eta}{a_N}}
+
+\mu\delta\propto\sqrt{\delta}
+
+Status: Research insight
+
+
+---
+
+J9 — QCFT deep-Gradia Jeans scale
+
+R_{J,\eta}
+\sim
+\left(
+\frac{c_s^4\delta}
+{G\rho a_\eta}
+\right)^{1/3}
+
+Status: Research estimate
+
+
+---
+
+J10 — η redistribution / cosmic web equation candidate
+
+\frac{\partial\rho}{\partial t}
+=
+\nabla\cdot(K(\rho)\nabla\rho)
+-
+C(\rho)
++
+R(\rho)
+
+or:
+
+\frac{\partial \rho}{\partial t}
+=
+\nabla\cdot
+(
+K(\rho)\nabla\rho
+)
++
+S_{\rm Cann}
+-
+S_{\rm collapse}
+
+Meaning: eternal finite universe as η flow/collapse/release equilibrium.
+Status: Speculative
+
+
+---
+
+K. Candidate canonical action and field theory
+
+K1 — Candidate QCFT Lagrangian
+
+\mathcal L
+=
+\frac12K(\rho)(\partial\rho)^2
++
+\frac12\rho^2(\partial n)^2
+-
+V_C(\rho)
+-
+\frac{\kappa}{4}\rho^4H_{\mu\nu}^{ab}H_{ab}^{\mu\nu}
++
+\mathcal L_{\rm source}
+
+Status: Candidate / needs rebuilding
+Audit: source term should likely be removed from canonical form.
+
+
+---
+
+K2 — Preferred source-free candidate action
+
+\mathcal L_{\rm QCFT}
+=
+\frac12K(\rho)(\partial\rho)^2
++
+\frac12\rho^2(\partial n)^2
+-
+V(\rho)
+-
+\frac{\kappa}{4}\rho^4H^2
+
+Status: Candidate canonical action v0
+
+
+---
+
+K3 — Internal curvature invariant
+
+H^2
+=
+H_{\mu\nu}^{ab}H_{ab}^{\mu\nu}
+
+Meaning: internal curvature/topological winding invariant, not Hubble parameter.
+Status: Working
+
+
+---
+
+K4 — Density Euler equation schematic
+
+To be derived properly. Linearised form used:
+
+(-K_0\nabla^2+m_\rho^2)\delta\rho
+=
+J_n
+
+Status: Derived in linearised approximation / needs full derivation
+
+
+---
+
+K5 — Static topology source sign audit
+
+For:
+
+E=
+\int
+\left[
+\frac12K_0|\nabla\rho|^2
++
+V(\rho)
++
+\frac12\rho^2T
+\right]d^3x
+
+with:
+
+T=|\nabla n|^2
+
+variation gives:
+
+-K_0\nabla^2\rho
++
+V'(\rho)
++
+\rho T
+=
+0
+
+linearised:
+
+(-K_0\nabla^2+m_\rho^2)\delta\rho
+=
+-\rho_0T
+
+Meaning: static topology depletes density.
+Status: Derived within static energy model
+
+
+---
+
+K6 — Dynamic density source
+
+(-K_0\nabla^2+m_\rho^2)\delta\rho
+=
+\rho_0
+\left[
+|\dot n|^2-|\nabla n|^2
+\right]
+
+Meaning: dynamic internal rotation can source positive density.
+Status: Working derived insight / needs formal Lorentzian derivation
+
+
+---
+
+K7 — Density Green function
+
+\left(-K_0\nabla^2+m_\rho^2\right)G_\rho(\mathbf x)
+=
+\delta^3(\mathbf x)
+
+G_\rho(r)
+=
+\frac{1}{4\pi K_0}
+\frac{e^{-r/\ell_\rho}}{r}
+
+Status: Derived from linearised density sector
+
+
+---
+
+K8 — Effective nonlocal binding after integrating out density
+
+E_{\rm bind}^{\rm eff}
+=
+-\frac{\lambda^2}{2}
+\int d^3x\,d^3y\,
+\mathcal T[n(\mathbf x)]
+G_\rho(|\mathbf x-\mathbf y|)
+\mathcal T[n(\mathbf y)]
+
+Status: Derived if attractive coupling exists / working
+
+
+---
+
+L. Chronode toy and variational equations
+
+L1 — Chronode density ansatz
+
+\rho(r)=\rho_0+\Delta e^{-r^2/R^2}
+
+Status: Toy model
+
+
+---
+
+L2 — Density-gradient energy coefficient
+
+E_\rho=A_\rho(\Delta)R
+
+A_\rho(\Delta)
+=
+\frac{3\pi^{3/2}}{2^{5/2}}
+K_\Delta\Delta^2
+
+with:
+
+K_\Delta=
+\frac{K_0}
+{\left(1-\frac{\rho_0+\Delta}{\rho_C}\right)^2}
+
+Status: Derived within Gaussian toy model
+
+
+---
+
+L3 — Orientation-gradient toy energy
+
+E_n
+=
+a_n(\rho_0+\Delta)^2Q^\alpha R
+
+Status: Toy model
+
+
+---
+
+L4 — Topological curvature toy energy
+
+E_H
+=
+\frac{c_H\kappa(\rho_0+\Delta)^4Q^2}{R}
+
+More generally:
+
+C(\Delta,Q)=c_H\kappa(\rho_0+\Delta)^4Q^\beta
+
+Status: Toy model
+
+
+---
+
+L5 — Potential toy energy
+
+E_V=B(\Delta)R^3
+
+B(\Delta)=c_VV_C(\rho_0+\Delta)
+
+Status: Toy model
+
+
+---
+
+L6 — Basic chronode toy energy
+
+E(R,\Delta,Q)
+=
+A(\Delta,Q)R
++
+\frac{C(\Delta,Q)}{R}
++
+B(\Delta)R^3
+
+Status: Toy model
+
+
+---
+
+L7 — Radius minimisation
+
+\frac{\partial E}{\partial R}
+=
+A-\frac{C}{R^2}+3BR^2=0
+
+3BR^4+AR^2-C=0
+
+Let:
+
+x=R^2
+
+3Bx^2+Ax-C=0
+
+R_\star^2
+=
+\frac{
+-A+\sqrt{A^2+12BC}
+}
+{6B}
+
+If :
+
+R_\star^2=\frac{C}{A}
+
+Status: Derived toy result
+
+
+---
+
+L8 — Derrick scaling
+
+E(\lambda)
+=
+\lambda(E_\rho+E_n)
++
+\lambda^{-1}E_H
++
+\lambda^3E_V
+
+or:
+
+E(\lambda)=A\lambda+\frac{C}{\lambda}+B\lambda^3
+
+Stationary:
+
+3B\lambda^4+A\lambda^2-C=0
+
+Status: Derived; strong structural result
+
+
+---
+
+L9 — Linear topology-density binding toy
+
+E_{\rm bind}=-\gamma Q^\sigma\Delta R
+
+Status: Rejected/obsolete toy
+Reason: caused large-radius runaway.
+
+
+---
+
+L10 — Saturating binding toy
+
+E_{\rm bind}
+=
+-\gamma Q^\sigma R
+\frac{\Delta^2}{\Delta^2+\Delta_s^2}
+
+Status: Toy / partially obsolete
+Reason: improved compression but still insufficient physics.
+
+
+---
+
+L11 — Finite-range binding toy
+
+E_{\rm bind}
+\sim
+-\Gamma Q^2 f(\Delta)
+\frac{R}{1+(R/\ell_\rho)^2}
+
+Status: Research model / derived motivation from kernel
+
+
+---
+
+L12 — Dynamic chronode energy
+
+E(R,\Delta,Q,N)
+=
+\frac{N^2}{(\rho_0+\Delta)^2R^3}
++
+A(\Delta,Q)R
++
+\frac{C(\Delta,Q)}{R}
++
+B(\Delta)R^3
+-
+D(Q,\Delta)
+\frac{R}{1+(R/\ell_\rho)^2}
+
+Simplified:
+
+E
+=
+\frac{N^2}{R^3}
++
+AR
++
+\frac{C}{R}
++
+BR^3
+-
+D\frac{R}{1+(R/\ell)^2}
+
+Status: Research/Toy
+
+
+---
+
+L13 — Dynamic compression condition
+
+|\dot n|^2>|\nabla n|^2
+
+or roughly:
+
+\omega R\gtrsim Q
+
+Meaning: dynamic chronodes can compress η; static knots may deplete it.
+Status: Research insight
+
+
+---
+
+L14 — Q-ball-like conserved internal charge scaling
+
+N\sim \rho^2\omega R^3
+
+\omega\sim \frac{N}{\rho^2R^3}
+
+E_{\rm time}
+\sim
+\frac{N^2}{\rho^2R^3}
+
+Status: Research analogy
+
+
+---
+
+L15 — Interface energy
+
+E_{\rm interface}
+\sim
+\frac12K
+\left(\frac{\Delta\rho}{w}\right)^2
+4\pi R^2w
+
+E_{\rm interface}
+\sim
+2\pi K\frac{(\Delta\rho)^2}{w}R^2
+
+with:
+
+w\sim\ell_\rho
+
+E_{\rm interface}
+\sim
+2\pi
+\frac{K(\bar\rho)}{\ell_\rho}
+(\rho_{\rm in}-\rho_{\rm out})^2R^2
+
+Status: Derived estimate / working
+
+
+---
+
+L16 — Mean interface density
+
+\bar\rho=\frac{\rho_{\rm in}+\rho_{\rm out}}2
+
+Status: Approximation
+
+
+---
+
+L17 — Fission stability criterion
+
+E(Q)<\sum_iE(Q_i)
+
+for all:
+
+Q=\sum_iQ_i
+
+Examples:
+
+E_4<E_3+E_1
+
+E_5<E_3+E_2
+
+Status: Derived stability criterion / working
+
+
+---
+
+L18 — Interface-driven high-Q scaling candidate
+
+E_{\rm interface}(Q)
+\sim
+\frac{Q^{2/3}}
+{
+\left(
+1-\frac{\rho_0+\alpha Q}{\rho_C}
+\right)^2
+}
+
+Status: Speculative scaling model
+
+
+---
+
+L19 — Formation time bottleneck
+
+t_{\rm form}
+=
+\int\frac{d\tau}{T(\rho)}
+
+If:
+
+T(\rho)\to0
+
+then:
+
+t_{\rm form}\to\infty
+
+Meaning: high-Q chronodes may be dynamically impossible to form.
+Status: Speculative
+
+
+---
+
+M. Particle sector mappings
+
+These are mostly not equations, but several mathematical identifications exist.
+
+M1 — Charge as winding
+
+Q_{\rm electric}\sim W[n]
+
+Status: Speculative but strong candidate
+
+
+---
+
+M2 — Charge conservation
+
+\partial_\mu J^\mu_{\rm charge}=0
+
+Status: Expected if winding is exact / not derived
+
+
+---
+
+M3 — General topology conservation too strong
+
+\partial_\mu J^\mu_{\rm topology}=0
+
+Status: Rejected as universal law
+Reason: weak interactions may rewrite topology while preserving charge-like invariants.
+
+
+---
+
+M4 — Spin-½ target
+
+\psi\rightarrow-\psi
+\quad\text{under}\quad
+2\pi
+
+\psi\rightarrow\psi
+\quad\text{under}\quad
+4\pi
+
+Status: Required target, not derived
+
+
+---
+
+M5 — Lepton decay scaling
+
+\Gamma_\ell
+=
+\frac{|\mathcal M|^2m_\ell^5}{192\pi^3}
+
+Status: Standard weak phenomenology reused in QCFT repo / not QCFT-derived
+
+
+---
+
+M6 — Muon decay
+
+\mu^-\rightarrow e^-+\bar\nu_e+\nu_\mu
+
+Status: Standard reaction, QCFT topology-relaxation interpretation
+
+
+---
+
+M7 — Electron-positron annihilation
+
+e^-+e^+\rightarrow\gamma+\gamma
+
+Status: Standard reaction, QCFT opposite-winding cancellation interpretation
+
+
+---
+
+M8 — Beta decay
+
+n\rightarrow p+e^-+\bar\nu_e
+
+Status: Standard reaction, QCFT braid/lepton topology rewrite candidate
+
+
+---
+
+M9 — Proton/neutron/hadron mappings
+
+\text{baryon}\sim\text{3-braid chronode}
+
+\text{meson}\sim\text{2-braid chronode}
+
+\text{lepton}\sim\text{thin-shell chronode harmonic}
+
+\text{neutrino}\sim\text{marginal chronode}
+
+Status: Speculative taxonomy
+
+
+---
+
+N. Old hadron/scattering phenomenology
+
+N1 — Proton radius variational energy
+
+E(R)
+=
+\pi^{3/2}v^2
+\left[
+AR+\frac{B}{2}m_\eta^2R^3+\frac{\widetilde C}{R}
+\right]
+
+Status: Old research model
+
+
+---
+
+N2 — Proton radius result
+
+R_p=c\ell_\eta
+
+\ell_\eta=\frac1{m_\eta}
+
+c^2=
+\frac{-A+\sqrt{A^2+6B\widetilde C}}{3B}
+
+Status: Old research model / scaffold
+
+
+---
+
+N3 — Forward pp scattering slope
+
+B=
+2\left(
+\frac{R_p^2}{3}+\ell_\eta^2
+\right)
+
+Status: Phenomenological scaffold
+
+
+---
+
+N4 — Forward exponential scattering
+
+\frac{d\sigma}{dt}\propto e^{-B|t|}
+
+Status: Standard phenomenological form used in QCFT scaffold
+
+
+---
+
+N5 — Near-threshold 3-body phase space
+
+\Phi_3\propto Q^2
+
+Status: Standard result / correction to older inconsistent repo claim
+
+
+---
+
+N6 — Rejected pion-production scaling
+
+\sigma(Q)\propto\sqrt Q
+
+Status: Rejected / inconsistent unless singular amplitude introduced
+
+
+---
+
+O. Quantum and field quantisation
+
+O1 — Canonical quantisation of η
+
+[\hat\eta^a(x),\hat\pi^b(y)]
+=
+i\hbar\delta^{ab}\delta(x-y)
+
+Status: Old repository proposal / speculative
+
+
+---
+
+O2 — Entanglement as shared η-history
+
+No clean equation beyond interpretation.
+Status: Dangerous / likely too local-hidden-variable-like unless reformulated
+
+
+---
+
+P. Standard reference equations used for comparison
+
+These are not QCFT laws but were used repeatedly.
+
+P1 — Flat ΛCDM expansion
+
+E_{\Lambda{\rm CDM}}(z)
+=
+\sqrt{\Omega_m(1+z)^3+1-\Omega_m}
+
+Status: Comparison model
+
+
+---
+
+P2 — Standard distance modulus
+
+\Delta\mu=
+5\log_{10}
+\left(
+\frac{d_{L,\eta}}{d_{L,\Lambda{\rm CDM}}}
+\right)
+
+Status: Comparison tool
+
+
+---
+
+P3 — Etherington distance duality
+
+d_L=(1+z)^2d_A
+
+Status: Consistency requirement
+
+
+---
+
+P4 — SN time dilation
+
+\Delta t_{\rm obs}
+=
+(1+z)\Delta t_{\rm emit}
+
+Status: Consistency requirement
+
+
+---
+
+Phase 1 result: condensed inventory
+
+Approximate count by class:
+
+Class	Count	Notes
+
+Canonical definitions	~6	η, ρ, n, perturbation split, clock definition
+Constitutive relations	~4	-limit
+Candidate fundamental dynamics	~3–5	action terms
+Derived working physics	~20	gravity, metric, kernel, interface, distances
+Phenomenology	~15	Pantheon law, response tensor, MOND, BAO, CMB
+Research/toy models	~30	chronode scans, particle mappings, scattering
+Rejected/obsolete	~5	scalar-only η, source terms, linear binding,  pion scaling
+
+
+
+---
+
+Highest-priority audit findings
+
+1. The true core is small
+
+QCFT likely needs only:
+
+\eta^a=\rho n^a
+
+T=T(\rho)
+
+K=K(\rho)
+
+V=V(\rho)
+
+S=\int \mathcal L_{\rm QCFT}\sqrt{-g}\,d^4x
+
+plus Euler–Lagrange equations.
+
+Everything else should be derived.
+
+
+---
+
+2. The canonical action is the bottleneck
+
+Current candidate:
+
+\mathcal L_{\rm QCFT}
+=
+\frac12K(\rho)(\partial\rho)^2
++
+\frac12\rho^2(\partial n)^2
+-
+V(\rho)
+-
+\frac{\kappa}{4}\rho^4H^2
+
+This is the next major target. It must be rebuilt from symmetry and dimensional analysis.
+
+
+---
+
+3. Source terms should be removed from the fundamental theory
+
+\mathcal L_{\rm source}
+
+and:
+
+J_\rho
+
+are placeholders for unresolved matter/topology.
+
+They should not appear in QCFT I as fundamental.
+
+
+---
+
+4. Pantheon/cosmology law remains phenomenological
+
+H_\eta(z)
+=
+H_0
+\left[
+\frac34+\frac14(1+z)^2
+\right]
+
+is important, but not canonical.
+
+It belongs in Derived/Efffective Cosmology, not foundations.
+
+
+---
+
+5. Chronode equations are research models, not laws
+
+Stage E was useful, but none of its toy energies belong in QCFT I except as later derived approximations.
+
+
+---
+
+6. Several equations need sign audits
+
+Especially:
+
+g=c^2\nabla\epsilon
+
+versus sign conventions, and the Lorentzian/static source sign for density compression.
+
+
+---
+
+Phase 1 complete
+
+We now have the working equation genome of QCFT.
+
+Next phase should be:
+
+Phase 2 — Symbol Dictionary
+
+We define every symbol exactly once before rebuilding the action.
